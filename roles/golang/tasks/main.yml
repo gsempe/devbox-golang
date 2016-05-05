@@ -12,6 +12,10 @@
   file:
       path=/home/vagrant/opt
       state=directory
+- name: Delete previous Go binary distribution
+  file:
+      path=/home/vagrant/opt/go
+      state=absent
 - name: Unpack the Go binary distribution
   unarchive:
       copy=no
